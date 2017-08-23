@@ -1,0 +1,12 @@
+*config.old
+build/
+images/*
+components/plnx_workspace/
+project-spec/meta-plnx-generated/
+pre-built/
+.petalinux/*
+!.petalinux/metadata
+*.o
+*.jou
+*.log
+*.bsp
