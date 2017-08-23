@@ -1,0 +1,24 @@
+/ {
+        reserved-memory {
+                #address-cells = <2>;
+                #size-cells = <2>;
+                ranges;
+                rproc_0_reserved: rproc@3ed000000 {
+                        no-map;
+                        reg = <0x0 0x3ed00000 0x0 0x1000000>;
+                };
+        };
+
+        amba {
+                test_r50: zynqmp_r5_rproc@0 {
+                        compatible = "xlnx,zynqmp-r5-remoteproc-1.0";
+                        reg = <0x0 0xff340000 0x0 0x100>, <0x0 0xff9a0000 0x0 0x400>, <0x0 0xff5e0000 0x0 0x400>;
+                        reg-names = "ipi", "rpu_base", "apb_base";
+                        core_conf = "split0";
+                        method = "direct";
+                        interrupt-parent = <&gic>;
+                        interrupts = <0 29 4>;
+                } ;
+        };
+
+};
