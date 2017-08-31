@@ -22,7 +22,7 @@ fi
 
 echo Executing benchmark
 /sbin/chmod +x ./runme.sh
-/sbin/ash ./runme.sh
+/sbin/bash ./runme.sh
 
 echo --- program exit, will shutdown shortly... ---
 # Spin forever.
