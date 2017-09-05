@@ -1,5 +1,11 @@
-BITSTREAM ?= images/linux/fpga_top_wrapper.bit
+BITSTREAM ?= images/linux/design_1_wrapper.bit
 BOOT_BIN = images/linux/BOOT.BIN
+QSIM ?= $(QSIM_PREFIX)/qsim-fastforwarder
+QSIM_MEM_SIZE = 4096
+QSIM_NUM_CPUS = 4
+QSIM_STATE_FILE = "xilinx_zcu102"
+QSIM_DT = "a"
+QSIM_PATH = `pwd`
 
 build: fix-tmp-dir-location
 	petalinux-build
@@ -15,6 +21,7 @@ config-rootfs: fix-tmp-dir-location
 
 package-boot:
 	petalinux-package --boot --force --fpga $(BITSTREAM) --u-boot --output $(BOOT_BIN)
+	tar -czf images/linux/img.tgz images/linux/BOOT.BIN images/linux/image.ub
 
 distclean: fix-tmp-dir-location
 	petalinux-build -x distclean
@@ -28,5 +35,11 @@ mrproper: fix-tmp-dir-location
 
 fix-tmp-dir-location:
 	sed --in-place --expression "s|CONFIG_TMP_DIR_LOCATION=.*|CONFIG_TMP_DIR_LOCATION=\"$(PWD)/build/tmp\"|" project-spec/configs/config
+
+qsim-boot:
+	$(QSIM) $(QSIM_PATH) $(QSIM_NUM_CPUS) $(QSIM_MEM_SIZE) $(QSIM_STATE_FILE) $(QSIM_DT)
+
+qsim-test:
+	$(QSIM) ./ $(QSIM_NUM_CPUS) $(QSIM_MEM_SIZE) 
 
 .PHONY: distclean mrproper
