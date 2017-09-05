@@ -159,6 +159,13 @@
 # CONFIG_kmod-dbg is not set
 
 #
+# lsbinitscripts 
+#
+# CONFIG_lsbinitscripts is not set
+# CONFIG_lsbinitscripts-dev is not set
+# CONFIG_lsbinitscripts-dbg is not set
+
+#
 # modutils-initscripts 
 #
 # CONFIG_modutils-initscripts is not set
@@ -213,8 +220,8 @@ CONFIG_mtd-utils=y
 # bash 
 #
 CONFIG_bash=y
-# CONFIG_bash-dbg is not set
 # CONFIG_bash-dev is not set
+# CONFIG_bash-dbg is not set
 
 #
 # sysvinit 
@@ -500,6 +507,20 @@ CONFIG_lmbench=y
 # CONFIG_lmbench-dbg is not set
 
 #
+# lsb 
+#
+# CONFIG_lsb is not set
+# CONFIG_lsb-dbg is not set
+# CONFIG_lsb-dev is not set
+
+#
+# nbench 
+#
+# CONFIG_nbench is not set
+# CONFIG_nbench-dbg is not set
+# CONFIG_nbench-dev is not set
+
+#
 # pciutils 
 #
 CONFIG_pciutils=y
@@ -605,8 +626,8 @@ CONFIG_pciutils=y
 # make 
 #
 # CONFIG_make is not set
-# CONFIG_make-dev is not set
 # CONFIG_make-dbg is not set
+# CONFIG_make-dev is not set
 
 #
 # perl 
@@ -616,10 +637,10 @@ CONFIG_pciutils=y
 # CONFIG_perl-module-unicore is not set
 # CONFIG_perl-dev is not set
 # CONFIG_perl-pod is not set
+# CONFIG_perl-lib is not set
 # CONFIG_perl-modules is not set
 # CONFIG_perl-module-cpan is not set
 # CONFIG_perl-misc is not set
-# CONFIG_perl-lib is not set
 # CONFIG_perl-module-cpanplus is not set
 
 #
@@ -900,9 +921,9 @@ CONFIG_run-postinsts=y
 # CONFIG_flac is not set
 # CONFIG_libflacPLUSPLUS is not set
 # CONFIG_flac-dev is not set
-# CONFIG_libflac is not set
 # CONFIG_flac-dbg is not set
 # CONFIG_liboggflacPLUSPLUS is not set
+# CONFIG_libflac is not set
 
 #
 # fontconfig 
@@ -1711,6 +1732,15 @@ CONFIG_run-postinsts=y
 # CONFIG_babeltrace-dbg is not set
 
 #
+# bootchart2 
+#
+CONFIG_bootchart2=y
+# CONFIG_bootchart2-dbg is not set
+CONFIG_bootchartd-stop-initscript=y
+# CONFIG_pybootchartgui is not set
+# CONFIG_bootchart2-dev is not set
+
+#
 # ca-certificates 
 #
 # CONFIG_ca-certificates is not set
@@ -2463,9 +2493,9 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 # CONFIG_qtwebkit is not set
 # CONFIG_qtwebkit-tools-dbg is not set
 # CONFIG_qtwebkit-plugins is not set
+# CONFIG_qtwebkit-mkspecs is not set
 # CONFIG_qtwebkit-dbg is not set
 # CONFIG_qtwebkit-qmlplugins-dbg is not set
-# CONFIG_qtwebkit-mkspecs is not set
 # CONFIG_qtwebkit-plugins-dbg is not set
 # CONFIG_qtwebkit-dev is not set
 # CONFIG_qtwebkit-qmldesigner is not set
@@ -2959,6 +2989,17 @@ CONFIG_bridge-utils=y
 # CONFIG_libatomic-ops-dbg is not set
 
 #
+# python-devel 
+#
+
+#
+# python-pycairo 
+#
+# CONFIG_python-pycairo is not set
+# CONFIG_python-pycairo-dev is not set
+# CONFIG_python-pycairo-dbg is not set
+
+#
 # x 
 #
 
@@ -3029,8 +3070,6 @@ CONFIG_bridge-utils=y
 # CONFIG_xserver-xorg-module-libint10 is not set
 # CONFIG_xserver-xorg-extension-dri is not set
 # CONFIG_xserver-xorg-module-libafb is not set
-# CONFIG_xserver-xorg-module-libmfb is not set
-# CONFIG_xserver-xorg-utils is not set
 # CONFIG_xserver-xorg-xephyr is not set
 # CONFIG_xserver-xorg-dev is not set
 # CONFIG_xserver-xorg-extension-record is not set
@@ -3040,12 +3079,14 @@ CONFIG_bridge-utils=y
 # CONFIG_xserver-xorg-module-xaa is not set
 # CONFIG_xserver-xorg-module-libwfb is not set
 # CONFIG_xserver-xorg-xvfb is not set
-# CONFIG_xf86-video-modesetting is not set
+# CONFIG_xserver-xorg-utils is not set
 # CONFIG_xserver-xorg-xwayland is not set
+# CONFIG_xf86-video-modesetting is not set
 # CONFIG_xserver-xorg-extension-extmod is not set
 # CONFIG_xserver-xorg-extension-glx is not set
 # CONFIG_xserver-xorg-module-libxf1bpp is not set
 # CONFIG_xserver-xorg-module-libxf4bpp is not set
+# CONFIG_xserver-xorg-module-libmfb is not set
 # CONFIG_xserver-xorg-fbdev is not set
 # CONFIG_xserver-xorg-sdl is not set
 # CONFIG_xserver-xorg-extension-dri2 is not set
@@ -3319,6 +3360,13 @@ CONFIG_gpio-demo=y
 # CONFIG_gpio-demo-dev is not set
 
 #
+# lat-bw-mem-tests 
+#
+CONFIG_lat-bw-mem-tests=y
+# CONFIG_lat-bw-mem-tests-dbg is not set
+# CONFIG_lat-bw-mem-tests-dev is not set
+
+#
 # mark-app 
 #
 CONFIG_mark-app=y
@@ -3349,7 +3397,7 @@ CONFIG_qsim-io=y
 #
 # rpmsg-apps 
 #
-CONFIG_rpmsg-apps=y
+# CONFIG_rpmsg-apps is not set
 # CONFIG_rpmsg-apps-dbg is not set
 # CONFIG_rpmsg-apps-dev is not set
 
@@ -3370,7 +3418,7 @@ CONFIG_test-mem=y
 #
 # test-threads 
 #
-CONFIG_test-threads=y
+# CONFIG_test-threads is not set
 # CONFIG_test-threads-dev is not set
 # CONFIG_test-threads-dbg is not set
 
@@ -3381,7 +3429,7 @@ CONFIG_test-threads=y
 #
 # rpmsg-modules 
 #
-CONFIG_rpmsg-modules=y
+# CONFIG_rpmsg-modules is not set
 # CONFIG_rpmsg-modules-dbg is not set
 # CONFIG_rpmsg-modules-dev is not set
 
